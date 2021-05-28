@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang ="en">
+<head>
+  <title>
+    human trafficking department
+  </title>
+  <link href="../cols/main.css" rel="stylesheet",type="text/css">
+</head>
+<body background="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQDMAcqlQ6Jo4JnwrdAg1xdO3ikaelwEN2ZjnXU5zb_rX23-uyhUQ"
+  <div class="container">
+    <h1>INSERTING THE DNA DATA</h1>
+    <h3>Fill In The Entries</h3>
+    <div class="message">
+      {{text | safe}}
+  </div>
+    <form action="{{url_for('success')}}" method="POST">
+      <input placeholder="enter the DNA record X" type="number" name="dna_rec1" required> <br>
+      <input placeholder="enter the DNA record Y" type="number" name="dna_rec2" required> <br>
+      <input placeholder="enter the DNA record X1" type="number" name="dna_rec3" required> <br>
+      <input placeholder="enter the DNA record Y1" type="number" name="dna_rec4" required> <br>
+      <input placeholder="enter the location" type="text" name="loc_rec" required> <br>
+      <input placeholder="enter the holder name" type="text" name="hold_rec" required><br>
+      <input placeholder="Enter email" type="email" name="email_rec" required><br>
+      <button type="submit">submit</button><br>
+      <button class="MyButton" type="button" onclick="window.location.href='{{url_for('search')}}'" value="search?">Want to search?</button>
+    </form>
+  </div>
+</body>
+</html>
